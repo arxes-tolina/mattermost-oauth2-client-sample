@@ -7,7 +7,7 @@ import Mattermost from 'mattermost';
 import passport from 'passport';
 import {Strategy as OAuth2Strategy} from 'passport-oauth2';
 
-const mattermost = new Mattermost();
+const mattermost = new Mattermost.Client();
 
 var auth = {
     url: null,
@@ -15,8 +15,8 @@ var auth = {
         this.url = mattermostUrl;
 
         const oauth2Strategy = new OAuth2Strategy({
-            authorizationURL: `${mattermostUrl}/api/v3/oauth/authorize`,
-            tokenURL: `${mattermostUrl}/api/v3/oauth/access_token`,
+            authorizationURL: "${mattermostUrl}/oauth/authorize",
+            tokenURL: "${mattermostUrl}/oauth/access_token",
             clientID: config.get("client_id"),
             clientSecret: config.get("client_secret"),
             callbackURL: "/oauth/callback"

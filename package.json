@@ -12,7 +12,7 @@
     "express": "~4.13.1",
     "express-session": "^1.13.0",
     "hbs": "~3.1.0",
-    "mattermost": "mattermost/mattermost-javascript#appcenter",
+    "mattermost": "arxes-tolina/mattermost-driver-javascript",
     "morgan": "~1.6.1",
     "nconf": "^0.8.4",
     "passport": "^0.3.2",
